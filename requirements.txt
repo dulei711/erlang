@@ -1,5 +1,2 @@
 streamlit
 python-math
-matplotlib
-numpy
-decimal
