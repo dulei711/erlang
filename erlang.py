@@ -26,9 +26,9 @@ st.title('Call Center Staffing Calculator')
 call_volume = st.number_input('Enter predicted call volume per hour:', min_value=1, max_value=10000, value=100)
 avg_handle_time = st.number_input('Enter average call handling time (in minutes):', min_value=1, max_value=60, value=5)
 traffic_intensity = call_volume * (avg_handle_time / 60)
-
+st.text(traffic_intensity)
 service_level = st.slider('Select desired service level:', min_value=80, max_value=99, value=90, step=1)
-
+st.text(service_level)
 num_agents = find_num_agents(service_level, traffic_intensity)
-
+st.text(num_agents)
 st.write(f'The required number of agents to achieve a service level of {service_level}% is {num_agents}.')
